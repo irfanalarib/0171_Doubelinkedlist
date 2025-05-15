@@ -41,8 +41,8 @@ public:
         {
             cout <<"\nDuolicate number not allowed" << endl;
             return;
-
-             //step 4: newNode.next = START
+        }
+            //step 4: newNode.next = START
             newNode->next = START;
 
             //step 5: START.prev = newNode (if START exists)
@@ -56,6 +56,12 @@ public:
             START = newNode;
             return;
         }
+        //insert in between node
+        //step 8: Located position for insertion 
+        Node *current = START;
+        while (current->next != NULL && current->next->noMhs < nim)
+        {
+            current = current ->next;
+        }
     }
-}
 };
