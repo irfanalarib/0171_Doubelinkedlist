@@ -94,5 +94,15 @@ public:
         cin >> rollNo;
 
         Node *current = START;
+
+        //STEP 1: Traverse the list to find node
+        while (current != NULL && current->noMhs !=rollNo)
+            current = current->next;
+
+        if(current == NULL)
+        {
+            cout << "Record not found" << endl;
+            return;
+        }
     }
 };
